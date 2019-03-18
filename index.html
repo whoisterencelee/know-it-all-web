@@ -6,8 +6,8 @@
 </style>
 
 <p style="text-align:center;font-size:4vw;">
-This link only works in O<sub>byte</sub><br />
-<a href="https://obyte.org/#download">download</a> and retry this link
+This link only works with O<sub>byte</sub><br />
+<a href="https://obyte.org/#download">get it</a> and retry this link
 </p>
 <div id="pair_link" style="font-size:2vw;"></div>
 
@@ -16,7 +16,7 @@ This link only works in O<sub>byte</sub><br />
 </div>
 <script>
 	pairing_code =  "byteball:Ai9tK3w0yQNvbR8kpQU5uOLRloQQXdFXJFFNZkdQN8fr@byteball.org/bb"
-	pairing = pairing_code + location.hash
+	pairing = pairing_code + ( location.hash || "#retry" )
 	document.getElementById( "pair_link" ).innerHTML = '<a href="' + pairing + '">' + pairing + '</a>'
 	try{
 
