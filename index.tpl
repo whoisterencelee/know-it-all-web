@@ -1,14 +1,14 @@
 <html><head>
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-<title>啥都知 激励问答!</title>
+<title>{{Know-it-all bot incentivize Q&A!}}</title>
 </head><body style="color:white;background:#4a90e2;display:flex;flex-direction:column;align-items:center;justify-content:center;height:90%;font-family:Arial;text-align:center;">
 <style>
 	a { color: white; }
 	div#license a { text-decoration: none; }
 </style>
 <p style="text-align:center;font-size:4vw;">
-糟糕，此链接仅适用于 O<sub>byte</sub><br />
-<a href="https://obyte.org/#download">获取</a> 并重试此链接
+{{Oops, this link only works with}} O<sub>byte</sub><br />
+<a href="https://obyte.org/#download">{{Get it}}</a> {{and retry this link}}
 </p>
 <div id="pair_link" style="font-size:2vw;width:80%;"></div>
 
