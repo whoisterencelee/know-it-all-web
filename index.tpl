@@ -37,9 +37,9 @@
 	if( location.search == "" ) location.replace( pairing )
 
 	// do the rest only if we're stuck
-	var lhtml = "" , languages = { "English" : "" , "Dansk" : "da" , "中文" : "zh" }
+	var lhtml = "" , languages = {{LANGUAGE}}
 	Object.entries( languages ).forEach( o => {
-		lhtml += ' <a href="' + "./" + o[ 1 ] + "?instruct" + pairing_code + '">' + o[ 0 ] + '</a> '
+		lhtml += ' <a href="' + location.origin + "/" + o[ 1 ] + "?instruct" + pairing_code + '">' + o[ 0 ] + '</a> '
 	} )
 	document.getElementById( "languages" ).innerHTML = lhtml
 
