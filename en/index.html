@@ -23,6 +23,8 @@ Oops, this link only works with O<sub>byte</sub><br />
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">cc-by-sa</a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Redirect link with instruction</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://particiate.net" property="cc:attributionName" rel="cc:attributionURL">whoisterencelee</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a><br />Based on a work at <a xmlns:dct="http://purl.org/dc/terms/" href="https://particiate.net" rel="dct:source">https://particiate.net</a>
 </div>
 <script>
+	try{
+
 	pairing_code = location.hash || "#new"
 	pairing =  "byteball:Ai9tK3w0yQNvbR8kpQU5uOLRloQQXdFXJFFNZkdQN8fr@byteball.org/bb" + pairing_code
 	document.getElementById( "pair_link" ).innerHTML = '<a href="' + pairing + '">' + pairing + '</a>'
@@ -35,13 +37,12 @@ Oops, this link only works with O<sub>byte</sub><br />
 //	fetch only does http request, so non http protocol will not work
 //	fetch( pairing ).then( response => console.log( response ) )
 
-	var lhtml = "" , languages = {"Dansk":"da","English":"en","中文":"zh"}
-	Object.entries( languages ).forEach( o => {
-		lhtml += ' <a href="' + ( location.origin == "null" ? "" : location.origin ) + "/" + o[ 1 ] + "?instruct" + pairing_code + '">' + o[ 0 ] + '</a> '
-	} )
+	var lhtml = "" , languages = [["Dansk","da"],["English","en"],["中文","zh"]] , l = languages.length
+	while( l-- ){
+		lhtml += ' <a href="' + ( location.origin == "null" ? "" : location.origin ) + "/" + languages[ l ][ 1 ] + "?instruct" + pairing_code + '">' + languages[ l ][ 0 ] + '</a> '
+	}
 	document.getElementById( "languages" ).innerHTML = lhtml
 
-	try{
 	if( location.search == "" ) location.replace( pairing ) // redirects to byteball:
 	}catch( e ){ 
 	}

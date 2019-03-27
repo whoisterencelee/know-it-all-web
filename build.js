@@ -10,11 +10,11 @@ function parse( lang ){ return html.replace( /{{([^}]*)}}/g , ( d , d1 ) => lang
 fs.readdir( "./languages" , ( err , files ) => {
 
 	// generate Language object first
-	var languages = {}
+	var languages = []
 	files.forEach( file => {
 		var lang = require( "./languages/" + file )
 		var iso = file.replace( /\..*/g , "" )
-		languages[ lang[ "LANGUAGE" ]  ] = iso
+		languages.push( [ lang[ "LANGUAGE" ]  ,  iso ] )
 	})
 
 	console.log( JSON.stringify( languages ) )
