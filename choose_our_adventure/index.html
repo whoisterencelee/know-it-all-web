@@ -19,7 +19,9 @@ Series listed below works in O<sub>byte</sub><br />
 <div id="languages" class="button"></div>
 </div>
 
-<div>Series 1 :</div>
+<div>Series 1 :
+Title of Series 1
+</div>
 <div>Story-teller : Entity325</div>
 <div>Current Move : 
 <a href="byteball:Ai9tK3w0yQNvbR8kpQU5uOLRloQQXdFXJFFNZkdQN8fr@byteball.org/bb#@189">@189</a> The text for the current move goes here
@@ -52,10 +54,10 @@ Series listed below works in O<sub>byte</sub><br />
 	}
 	document.getElementById( "languages" ).innerHTML = lhtml
 
-	//if( location.search == "" ) location.replace( pairing ) // redirects to byteball:
+	if( location.search == "" ) location.replace( pairing ) // redirects to byteball:
 	}catch( e ){ 
 		// insert a search query will reload this page without above location.replace redirect and show page instructions
-	//	if( location.search == "" ) location.search = "instruct"
+		if( location.search == "" ) location.search = "instruct"
 	}
 
 	// below line will override the redirect above, needs to be within the catch block
