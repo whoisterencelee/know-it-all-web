@@ -11,7 +11,8 @@
 <img src="../Know-it-all.svg"></img>
 <p class="button" style="text-align:center;font-size:4vw;">
 {{Oops, this link only works with}} O<sub>byte</sub><br />
-<a href="https://obyte.org/#download">{{Get it}}</a> {{and retry this link}}
+<a href="https://obyte.org/#download">{{Get it}}</a><br />
+{{and retry this link}}
 </p>
 <div id="pair_link" class="button" style="font-size:2vw;width:80%;"></div>
 
