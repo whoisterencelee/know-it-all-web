@@ -27,12 +27,12 @@ og prøv igen dette link
 	try{
 
 	pairing_code = location.hash || "#new"
-	pairing =  "byteball:Ai9tK3w0yQNvbR8kpQU5uOLRloQQXdFXJFFNZkdQN8fr@byteball.org/bb" + pairing_code
+	pairing =  "obyte:Ai9tK3w0yQNvbR8kpQU5uOLRloQQXdFXJFFNZkdQN8fr@byteball.org/bb" + pairing_code
 	document.getElementById( "pair_link" ).innerHTML = '<a href="' + pairing + '">' + pairing + '</a>'
 
 //	Why other methods won't work:
 
-//	using meta tag <meta http-equiv="Refresh" content="0; url=byteball:Ai9tK3w0yQNvbR8kpQU5uOLRloQQXdFXJFFNZkdQN8fr@byteball.org/bb#@11" />
+//	using meta tag <meta http-equiv="Refresh" content="0; url=obyte:Ai9tK3w0yQNvbR8kpQU5uOLRloQQXdFXJFFNZkdQN8fr@byteball.org/bb#@11" />
 //	doesn't work because I need to grab the query and hash, redirect the hash with javascript
 
 //	fetch only does http request, so non http protocol will not work
