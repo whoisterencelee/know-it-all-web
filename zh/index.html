@@ -5,13 +5,15 @@
 <title>啥都知 激励问答!</title>
 </head><body style="color:rgba(255,255,255,0.9);background:#3d84a8;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Arial;text-align:center;margin-top:100px;">
 <style>
-	.button > a{ color:rgba(255,255,255,0.9);text-decoration:none;border:2px solid;border-radius:0.8em;padding:0.1em 0.39em 0.1em 0.25em;}
+	.button > a{ color:white;background-color:#48446a;text-decoration:none;padding:0.1em 0.5em;font-weight:bold;}
 	div#license a{color:rgba(255,255,255,0.9);text-decoration:none;}
 </style>
-<img style="width:60vw;" src="../Know-it-all.svg"></img>
+
+<video poster="../Know-it-all.svg" style="width:60vw;" controls src="../video/Know-it-All.mp4"></video>
+
 <p class="button" style="text-align:center;font-size:4vw;">
 糟糕，此链接仅适用于 O<sub>byte</sub><br />
-<a href="https://obyte.org/#download">获取</a><br />
+<a href="https://obyte.org/#download">现在下载</a><br />
 然后重试此链接
 </p>
 <div id="pair_link" class="button" style="font-size:2vw;width:80%;"></div>
@@ -50,7 +52,7 @@
 	}
 	document.getElementById( "languages" ).innerHTML = lhtml
 
-	if( location.search == "" ) location.replace( pairing ) // redirects to byteball:
+	//if( location.search == "" ) location.replace( pairing ) // redirects to byteball:
 	}catch( e ){ 
 		// insert a search query will reload this page without above location.replace redirect and show page instructions
 		if( location.search == "" ) location.search = "instruct"

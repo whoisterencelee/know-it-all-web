@@ -5,13 +5,15 @@
 <title>{{Know-it-all}} {{incentivize Q&A!}}</title>
 </head><body style="color:rgba(255,255,255,0.9);background:#3d84a8;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:Arial;text-align:center;margin-top:100px;">
 <style>
-	.button > a{ color:rgba(255,255,255,0.9);text-decoration:none;border:2px solid;border-radius:0.8em;padding:0.1em 0.39em 0.1em 0.25em;}
+	.button > a{ color:white;background-color:#48446a;text-decoration:none;padding:0.1em 0.5em;font-weight:bold;}
 	div#license a{color:rgba(255,255,255,0.9);text-decoration:none;}
 </style>
-<img style="width:60vw;" src="../Know-it-all.svg"></img>
+
+<video poster="../Know-it-all.svg" style="width:60vw;" controls src="../video/Know-it-All.mp4"></video>
+
 <p class="button" style="text-align:center;font-size:4vw;">
 {{Oops, this link only works with}} O<sub>byte</sub><br />
-<a href="https://obyte.org/#download">{{Get it}}</a><br />
+<a href="https://obyte.org/#download">{{DOWNLOAD NOW}}</a><br />
 {{and retry this link}}
 </p>
 <div id="pair_link" class="button" style="font-size:2vw;width:80%;"></div>
@@ -36,28 +38,29 @@
 	pairing =  ( IsMobileCard() ? "byteball" : "obyte" ) + ":Ai9tK3w0yQNvbR8kpQU5uOLRloQQXdFXJFFNZkdQN8fr@byteball.org/bb" + pairing_code
 	document.getElementById( "pair_link" ).innerHTML = '<a href="' + pairing + '">' + pairing + '</a>'
 
-//	Why other methods won't work:
-
-//	using meta tag <meta http-equiv="Refresh" content="0; url=byteball:Ai9tK3w0yQNvbR8kpQU5uOLRloQQXdFXJFFNZkdQN8fr@byteball.org/bb#@11" />
-//	doesn't work because I need to grab the query and hash, redirect the hash with javascript
-
-//	fetch only does http request, so non http protocol will not work
-//	fetch( pairing ).then( response => console.log( response ) )
-
 	var lhtml = "" , languages = {{LANGUAGE}} , l = languages.length
 	while( l-- ){
 		lhtml += ' <a href="' + ( location.origin == "null" ? "" : location.origin ) + "/" + languages[ l ][ 1 ] + "?instruct" + pairing_code + '">' + languages[ l ][ 0 ] + '</a> '
 	}
 	document.getElementById( "languages" ).innerHTML = lhtml
 
+	// Why other methods won't work:
+
+	// using meta tag <meta http-equiv="Refresh" content="0; url=byteball:Ai9tK3w0yQNvbR8kpQU5uOLRloQQXdFXJFFNZkdQN8fr@byteball.org/bb#@11" />
+	// doesn't work because I need to grab the query and hash, redirect the hash with javascript
+
+	// fetch only does http request, so non http protocol will not work
+	// fetch( pairing ).then( response => console.log( response ) )
+
 	if( location.search == "" ) location.replace( pairing ) // redirects to byteball:
+
 	}catch( e ){ 
 		// insert a search query will reload this page without above location.replace redirect and show page instructions
 		if( location.search == "" ) location.search = "instruct"
 	}
 
 	// below line will override the redirect above, needs to be within the catch block
-	//if( location.search == "" ) location.search = "instruct"
+	// if( location.search == "" ) location.search = "instruct"
 	// no need to add pairing_code since that's part of location.hash and is included already
 	
 	//window.open( ( location.origin == "null" ? "" : location.origin ) + "?instruct" )
