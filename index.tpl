@@ -55,14 +55,18 @@
 	if( location.search == "" ) location.replace( pairing ) // redirects to byteball:
 
 	}catch( e ){ 
+		console.log( "obyte wallet not installed" )
 		// insert a search query will reload this page without above location.replace redirect and show page instructions
 		if( location.search == "" ) location.search = "instruct"
 	}
 
 	// below line will override the redirect above, needs to be within the catch block
+	// but then the fallback mechanism doesn't work on desktop firefox browser
 	// if( location.search == "" ) location.search = "instruct"
 	// no need to add pairing_code since that's part of location.hash and is included already
 	
+	// setTimeout( console.log( document.title ) , 3000 ) // maybe check if document is an error page or not
+	console.log( document.URL )
 	//window.open( ( location.origin == "null" ? "" : location.origin ) + "?instruct" )
 
 </script>
