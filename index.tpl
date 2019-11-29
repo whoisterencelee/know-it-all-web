@@ -53,7 +53,7 @@
 	// fetch( pairing ).then( response => console.log( response ) )
 
 	//if( location.search == "" ) location.replace( pairing ) // redirects to byteball:
-	if( location.search == "" ) location.assign( pairing ) // redirects to byteball: , assign allows back button
+	if( location.search == "" && location.hash != "" ) location.assign( pairing ) // redirects to byteball: , assign allows back button
 
 	}catch( e ){ 
 		console.log( "obyte wallet not installed" )
